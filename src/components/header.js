@@ -3,19 +3,28 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const StyledHeader = styled.header`
-  h1 {
-    color: lightgreen;
+  padding: 1rem 0 3rem;
+  .title {
+    color: #000;
+    font-size: 3rem;
+    text-decoration: none;
   }
-  ul {
+  .nav-list {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    & li {
+    li {
       margin-right: 10px;
-      & a {
+      a {
         text-decoration: none;
-        padding: 10px 0;
+        font-size: 0.9rem;
+        margin-right: 1.3rem;
+        padding: 1rem 0.5rem 1rem 0;
+        color: #999;
+        &:hover {
+          color: #666666;
+        }
       }
     }
   }
@@ -24,9 +33,13 @@ const StyledHeader = styled.header`
 const Header = () => {
   return (
     <StyledHeader>
-      <h1>Evgeny Minin</h1>
+      <h1>
+        <Link className="title" to="/">
+          Evgeny Minin
+        </Link>
+      </h1>
       <nav>
-        <ul>
+        <ul className="nav-list">
           <li>
             <Link to="/">Home</Link>
           </li>
