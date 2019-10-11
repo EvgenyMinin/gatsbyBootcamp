@@ -2,20 +2,20 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Post from "./../components/post"
-
-const AppWrapper = styled.div`
-  width: 90%;
-  margin: 0 auto;
-`
+import Footer from "../components/footer"
+import Header from "./../components/header"
+import { AppContainer } from "./../components/container"
 
 const IndexPage = () => {
   return (
-    <AppWrapper>
+    <AppContainer>
+      <Header />
       <Post />
       <p>
         Need a developer? <Link to="/contact">Contact me.</Link>
       </p>
-    </AppWrapper>
+      <Footer />
+    </AppContainer>
   )
 }
 
