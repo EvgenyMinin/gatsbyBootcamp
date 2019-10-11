@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
 const StyledHeader = styled.header`
@@ -27,18 +27,27 @@ const StyledHeader = styled.header`
         color: #666666;
       }
       &--active {
-        color: red;
+        color: #333333;
       }
     }
   }
 `
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <StyledHeader>
       <h1>
         <Link className="title" to="/">
-          Evgeny Minin
+          {data.site.siteMetadata.title}
         </Link>
       </h1>
       <nav>
