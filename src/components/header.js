@@ -16,15 +16,18 @@ const StyledHeader = styled.header`
     padding: 0;
     li {
       margin-right: 10px;
-      a {
-        text-decoration: none;
-        font-size: 0.9rem;
-        margin-right: 1.3rem;
-        padding: 1rem 0.5rem 1rem 0;
-        color: #999;
-        &:hover {
-          color: #666666;
-        }
+    }
+    &__item {
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-right: 1.3rem;
+      padding: 1rem 0.5rem 1rem 0;
+      color: #999;
+      &:hover {
+        color: #666666;
+      }
+      &--active {
+        color: red;
       }
     }
   }
@@ -41,16 +44,40 @@ const Header = () => {
       <nav>
         <ul className="nav-list">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              className="nav-list__item"
+              activeClassName="nav-list__item--active"
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link
+              className="nav-list__item"
+              activeClassName="nav-list__item--active"
+              to="/blog"
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link
+              className="nav-list__item"
+              activeClassName="nav-list__item--active"
+              to="/about"
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              className="nav-list__item"
+              activeClassName="nav-list__item--active"
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
