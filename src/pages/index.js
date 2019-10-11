@@ -4,18 +4,17 @@ import styled from "styled-components"
 import Post from "./../components/post"
 import Footer from "../components/footer"
 import Header from "./../components/header"
-import { AppContainer } from "./../components/container"
+import AppContainer from "./../components/container"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <AppContainer>
-      <Header />
+    <Layout>
       <Post />
       <p>
         Need a developer? <Link to="/contact">Contact me.</Link>
       </p>
-      <Footer />
-    </AppContainer>
+    </Layout>
   )
 }
 

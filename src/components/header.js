@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
     & li {
       margin-right: 10px;
       & a {
